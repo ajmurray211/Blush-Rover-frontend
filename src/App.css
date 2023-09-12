@@ -1,38 +1,52 @@
+/* ##################################### global styles ##################################### */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ##################################### page styles ##################################### */
+
+
+/* ##################################### component styles ##################################### */
+
+
+/* nav style */
+#navContainer {
+  background-color: rgb(240, 237, 231);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navTitleContainer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.socials {
+  display: flex;
+  width: 15%;
+  align-items: center;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.socials button {
+  background-color: rgb(214, 211, 204);
+  border: none;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.navTitleContainer img {
+  width: 13vh;
+}
+
+.navbar {
+  font-size: 20px;
+  margin: 20px 30px;
+  list-style: none;
+  border-top: 1px solid black;
+}
+
+.nav-link:hover {
+  color: rgb(196, 193, 187);
 }
