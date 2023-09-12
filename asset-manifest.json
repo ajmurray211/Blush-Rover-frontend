@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Blush-Rover-frontend/static/css/main.ea7f3a64.css",
-    "main.js": "/Blush-Rover-frontend/static/js/main.50f40607.js",
+    "main.css": "/Blush-Rover-frontend/static/css/main.5ecb9828.css",
+    "main.js": "/Blush-Rover-frontend/static/js/main.149bebc3.js",
     "static/js/787.cda612ba.chunk.js": "/Blush-Rover-frontend/static/js/787.cda612ba.chunk.js",
+    "static/media/Cart.png": "/Blush-Rover-frontend/static/media/Cart.cc7a2fc3c10964a1ee3f.png",
     "index.html": "/Blush-Rover-frontend/index.html",
-    "main.ea7f3a64.css.map": "/Blush-Rover-frontend/static/css/main.ea7f3a64.css.map",
-    "main.50f40607.js.map": "/Blush-Rover-frontend/static/js/main.50f40607.js.map",
+    "main.5ecb9828.css.map": "/Blush-Rover-frontend/static/css/main.5ecb9828.css.map",
+    "main.149bebc3.js.map": "/Blush-Rover-frontend/static/js/main.149bebc3.js.map",
     "787.cda612ba.chunk.js.map": "/Blush-Rover-frontend/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea7f3a64.css",
-    "static/js/main.50f40607.js"
+    "static/css/main.5ecb9828.css",
+    "static/js/main.149bebc3.js"
   ]
 }
