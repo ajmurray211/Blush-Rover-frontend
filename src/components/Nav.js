@@ -2,7 +2,6 @@ import logo from '../assets/Cart.png'
 import React, { useState } from 'react';
 import { Button, NavItem, NavLink, Navbar } from 'reactstrap';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { Link } from 'react-router-dom';
 
 const Nav = () => {
     return (
@@ -20,10 +19,10 @@ const Nav = () => {
                     <NavLink href="/">Home</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/">Menu</NavLink>
+                    <NavLink href="/">Packages</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/">Packages</NavLink>
+                    <NavLink href="/">Menu</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink href="/">FAQ's</NavLink>
