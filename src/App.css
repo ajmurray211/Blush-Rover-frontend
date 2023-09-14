@@ -1,76 +1,45 @@
 /* ##################################### global styles ##################################### */
+:root {
+  --color-1: rgb(244, 205, 196);
+  --color-2: rgb(84, 84, 84);
+  --color-3: rgb(255, 255, 255);
+  --color-4: rgb(0, 0, 0);
+  --font-1: 'Italianno', cursive;
+  --font-2: 'Zilla Slab Highlight';
+}
+
 .App {
   text-align: center;
 }
 
 #tempId {
-  background-color: black;
+  background-color: green;
+}
+
+.title {
+  font-size: 40px;
+  font-family: var(--font-1)
+}
+
+.body {
+  font-size: 18px;
+  font-family: var(--font-2);
 }
 
 /* ##################################### page styles ##################################### */
 
-
-/* ##################################### component styles ##################################### */
-
-
-/* nav style */
-#navContainer {
-  background-color: #F4CDC4;
-}
-
-.navTitleContainer {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-}
-
-.socials {
-  display: flex;
-  width: 15%;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.socials button {
-  background-color: rgb(214, 211, 204);
-  border: none;
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
-
-.navTitleContainer img {
-  width: 13vh;
-}
-
-.navbar {
-  font-size: 20px;
-  margin: 20px 30px;
-  list-style: none;
-  border-top: 1px solid black;
-}
-
-.linksContainer a{
-  text-decoration: none;
-  color: black;
-}
-
-.linksContainer a:hover {
-  color: rgb(196, 193, 187);
-}
-
-/* Home Component */
+/* Home page */
 
 #welcomeTitleContainer {
   margin: 50px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
 
 #welcomeImg {
-  background-color: rgb(84, 84, 84);
+  background-color: var(--color-2);
   width: 600px;
   height: 500px;
   margin: 20px 0px;
@@ -85,6 +54,7 @@
 #homePackagesContainer {
   margin: 100px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -94,25 +64,172 @@
 }
 
 #homePackagesImg {
-  background-color: rgb(84, 84, 84);
+  background-color: var(--color-2);
   width: 400px;
   height: 400px;
 }
 
 .homeTitle {
   font-size: 50px;
-  font-family: 'Italianno', cursive;
+  font-family: var(--font-1);
 }
 
 .homeDescription {
   font-size: 20px;
-  font-family: 'Zilla Slab Highlight', serif;
+  font-family: var(--font-2);
+}
+
+/* Packages Page */
+
+#pacakagePage {
+  display: grid;
+  grid-template-rows: repeat(4, .5fr);
+  grid-auto-rows: auto;
+  grid-gap: 100px;
+}
+
+#PackagesTitleContainer {
+  position: relative;
+  margin: 30px 40px;
+  min-height: 50vh;
+  height: max-content;
+}
+
+#packageTitleImg {
+  margin-left: 5vw;
+  width: 50vw;
+  height: 30vw;
+  background-color: var(--color-2);
+}
+
+#packageDecContainer {
+  padding: 20px;
+  background-color: var(--color-1);
+  border-radius: 35px;
+  position: absolute;
+  top: 9vw;
+  right: 17vw;
+  max-width: 60vw;
+  min-width: 300px;
+}
+
+#packageVariationsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.packageVarient {
+  width: 30%;
+  min-width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 35px;
+  background-color: var(--color-1);
+}
+
+.varientTitle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#PackagesTravelContainer {
+  min-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  max-width: 40%;
+  border-radius: 35px;
+  align-items: center;
+  background-color: var(--color-1);
+  margin: auto;
+  padding: 20px;
+}
+
+#packageAddOnSection {
+  margin-bottom: 20px;
+  padding: 20px;
+  height: fit-content;
+}
+
+#packageAddOnContainer {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.addOn {
+  background-color: var(--color-1);
+  margin: 5px;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 35px;
+  min-width: 200px;
+}
+
+/* ##################################### component styles ##################################### */
+
+
+/* nav style */
+#navContainer {
+  background-color: var(--color-1);
+  font-size: 20px;
+
+}
+
+.navTitleContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  width: 15%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.socials button {
+  background-color: rgb(214, 211, 204);
+  border: none;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.navTitleContainer img {
+  margin: 20px 30px;
+  width: 13vh;
+}
+
+.navbar {
+  list-style: none;
+  border-top: 1px solid black;
+}
+
+.linksContainer a {
+  text-decoration: none;
+  color: black;
+}
+
+.linksContainer a:hover {
+  color: rgb(196, 193, 187);
 }
 
 /* Footer styles */
 #footerContainer {
   padding: 20px 60px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background-color: #F4CDC4;
@@ -128,6 +245,7 @@
 
 .location {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;

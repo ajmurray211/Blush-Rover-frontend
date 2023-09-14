@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
                     </p>
                 </div>
             </div>
+            
             <div id="homePackagesContainer">
                 <div id="homePackagesMsg">
                     <p className="homeTitle">Packages</p>
@@ -34,7 +36,9 @@ const Home = () => {
                         memories. Our frozen drink stand provides a picturesque backdrop for events like
                         weddings, bridal showers, baby showers, and more.
                     </p>
-                    <Button color="light" href="/packages">Learn More</Button>
+                    <Link to="/packages">
+                        <Button color="light" >Learn More</Button>
+                    </Link>
                 </div>
                 <div id="homePackagesImg" />
             </div>
