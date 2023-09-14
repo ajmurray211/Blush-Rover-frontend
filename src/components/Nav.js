@@ -2,6 +2,7 @@ import logo from '../assets/Cart.png'
 import React, { useState } from 'react';
 import { Button, NavItem, NavLink, Navbar } from 'reactstrap';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
 
@@ -22,19 +23,19 @@ const Nav = () => {
             </div>
             <Navbar container>
                 <NavItem>
-                    <NavLink href="/">Home</NavLink>
+                    <Link to="/">Home</Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/">Packages</NavLink>
+                    <Link to="/packages">Packages</Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/">Menu</NavLink>
+                    <Link to="/">Menu</Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/">FAQ's</NavLink>
+                    <Link to="/">FAQ's</Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/">Contact</NavLink>
+                    <Link to="/">Contact</Link>
                 </NavItem>
             </Navbar>
         </div>
