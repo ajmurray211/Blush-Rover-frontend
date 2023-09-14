@@ -4,7 +4,7 @@ import { Button, NavItem, NavLink, Navbar } from 'reactstrap';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
+const CustomNav = () => {
 
     const openInstagramProfile = () => {
         window.open('https://www.instagram.com/blushandrover/', '_blank');
@@ -32,4 +32,4 @@ const Nav = () => {
     );
 }
 
-export default Nav;
+export default CustomNav;
