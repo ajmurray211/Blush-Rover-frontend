@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+#tempId {
+  background-color: black;
+}
+
 /* ##################################### page styles ##################################### */
 
 
@@ -11,7 +15,7 @@
 
 /* nav style */
 #navContainer {
-  background-color: rgb(240, 237, 231);
+  background-color: #F4CDC4;
 }
 
 .navTitleContainer {
@@ -51,24 +55,73 @@
   color: rgb(196, 193, 187);
 }
 
+/* Home Component */
+
+#welcomeTitleContainer {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#welcomeImg {
+  background-color: rgb(84, 84, 84);
+  width: 600px;
+  height: 500px;
+  margin: 20px 0px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+#welcomeMsg {
+  max-width: 40vw;
+}
+
+#homePackagesContainer {
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#homePackagesMsg {
+  max-width: 30vw;
+}
+
+#homePackagesImg {
+  background-color: rgb(84, 84, 84);
+  width: 400px;
+  height: 400px;
+}
+
+.homeTitle {
+  font-size: 50px;
+  font-family: 'Italianno', cursive;
+}
+
+.homeDescription {
+  font-size: 20px;
+  font-family: 'Zilla Slab Highlight', serif;
+}
+
 /* Footer styles */
-#footerContainer{
+#footerContainer {
   padding: 20px 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(240, 237, 231);
+  background-color: #F4CDC4;
 }
 
-#footerContainer img{
+#footerContainer img {
   width: 13vh;
 }
 
-#footerContainer button{
-margin-right: 10px;
+#footerContainer button {
+  margin-right: 10px;
 }
 
-.location{
+.location {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,6 +131,6 @@ margin-right: 10px;
   width: fit-content;
 }
 
-#locationsTitle{
+#locationsTitle {
   font-size: 20px;
 }

@@ -4,6 +4,12 @@ import { Button, NavItem, NavLink, Navbar } from 'reactstrap';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Nav = () => {
+
+    const openInstagramProfile = () => {
+        window.open('https://www.instagram.com/blushandrover/', '_blank');
+    };
+
+
     return (
         <div id='navContainer'>
             <div className='navTitleContainer'>
@@ -11,7 +17,7 @@ const Nav = () => {
                 <img src={logo} />
                 <div className='socials'>
                     <Button>Contact Me!</Button>
-                    <InstagramIcon />
+                    <InstagramIcon onClick={openInstagramProfile} />
                 </div>
             </div>
             <Navbar container>
