@@ -51,7 +51,12 @@
   border-top: 1px solid black;
 }
 
-.nav-link:hover {
+.linksContainer a{
+  text-decoration: none;
+  color: black;
+}
+
+.linksContainer a:hover {
   color: rgb(196, 193, 187);
 }
 

@@ -21,22 +21,12 @@ const Nav = () => {
                     <InstagramIcon onClick={openInstagramProfile} />
                 </div>
             </div>
-            <Navbar container>
-                <NavItem>
+            <Navbar container className='linksContainer'>
                     <Link to="/">Home</Link>
-                </NavItem>
-                <NavItem>
                     <Link to="/packages">Packages</Link>
-                </NavItem>
-                <NavItem>
                     <Link to="/">Menu</Link>
-                </NavItem>
-                <NavItem>
                     <Link to="/">FAQ's</Link>
-                </NavItem>
-                <NavItem>
                     <Link to="/">Contact</Link>
-                </NavItem>
             </Navbar>
         </div>
     );
