@@ -26,6 +26,10 @@
   font-family: var(--font-2);
 }
 
+.botPad {
+  margin-bottom: 20px;
+}
+
 /* ##################################### page styles ##################################### */
 
 /* Home page */
@@ -170,6 +174,94 @@
   padding: 10px;
   border-radius: 35px;
   min-width: 200px;
+}
+
+/* Menu page */
+
+#menuPage {
+  display: grid;
+  grid-template-rows: 1fr .5fr .5fr .5fr .5fr;
+  gap: 20px;
+}
+
+#menuWelcomeSection {
+  background-color: var(--color-1);
+  margin: 20px;
+  display: flex;
+  padding: 2vw;
+  padding-left: 6vw;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: left;
+  min-height: 100%;
+}
+
+#menuTitleImg1 {
+  background-color: rgba(0, 0, 0, 0.485);
+  width: 50vw;
+  height: 30vw;
+  margin-left: 3vw;
+}
+
+#menuTitleImg2 {
+  position: absolute;
+  right: 15vw;
+  background-color: rgba(0, 128, 0, 0.356);
+  width: 30vw;
+  height: 40vw;
+}
+
+.menuWelcome1Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#menuFlex1 {
+  display: flex;
+  flex-direction: column;
+}
+
+#menuWelcomMsg {
+  align-self: flex-start;
+}
+
+#mm2 {
+  margin-left: 10vw;
+}
+
+#mm3 {
+  margin-left: 20vw;
+}
+
+.menuOptions {
+  margin: 0 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menuOption {
+  display: flex;
+  min-width: 150px;
+  margin: 10px;
+  width: 25%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuTitleSection {
+  margin-bottom: 40px;
+}
+
+#menuDisclaimerSection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
 /* ##################################### component styles ##################################### */

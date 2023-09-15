@@ -66,4 +66,37 @@ const addOns = [
     },
 ]
 
-export { packages, addOns }
+const cocktails = [
+    'FROSE',
+    'MUDSLIDE',
+    'MARGARITA',
+    'RUM & COKE',
+    'JACK & COKE',
+    'OLD FASHION',
+    'MOSCOW MULE',
+    'PEACH BELLINI',
+    'APEROL SPRITZ',
+    'FROZEN APPLE CIDER',
+    'BLACKBERRY PEACH SANGRIA',
+]
+
+const mocktails = [
+    'FROSE',
+    'COCA COLA',
+    'DREAMSCILE',
+    'BLUE RASPBERRY',
+    'FROZEN APPLE CIDER',
+    'STRAWBERRY LEMONADE',
+    'BLACKBERRY PEACH SANGRIA',
+]
+
+const puree = [
+    'MANGO',
+    'PEACH',
+    'RASPBERRY',
+    'BLACKBERRY', 
+    'STRAWBERRY',
+    'BLOOD ORANGE'
+]
+
+export { packages, addOns, cocktails, mocktails, puree }
