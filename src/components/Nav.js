@@ -25,7 +25,7 @@ const CustomNav = () => {
                     <Link to="/">Home</Link>
                     <Link to="/packages">Packages</Link>
                     <Link to="/menu">Menu</Link>
-                    <Link to="/">FAQ's</Link>
+                    <Link to="/faq">FAQ's</Link>
                     <Link to="/">Contact</Link>
             </Navbar>
         </div>
