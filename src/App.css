@@ -266,6 +266,7 @@
 
 
 /* FAQ page */
+
 #faqWelcome {
   margin: 20px;
   display: flex;
@@ -307,6 +308,65 @@
 
 #faqLogo {
   width: 150px;
+}
+
+/* contact page */
+
+#contactWelcomeSection{
+  margin: 5vw 10vw ;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+
+#contactWelcomeMsgContainer{
+  padding-bottom: 20px;
+}
+
+#contactWelcomeImgContainer{
+  display: flex;
+  align-items: center;
+  max-width: 50vw;
+  justify-content: center;
+}
+
+#contactWelcomeImg{
+  width: 25vw;
+  height: 25vw;
+  background-color: var(--color-2);
+  z-index: 1;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+#contactWelcomeaccent{
+  position: relative;
+  right: -18vw;
+  top: -2vw;
+  width: 25vw;
+  height: 25vw;
+  z-index: 0;
+  min-height: 200px;
+  min-width: 200px;
+  background-color: var(--color-1);
+}
+
+#contactContainer{
+  background-color: var(--color-1);
+  margin: 1vw 6vw;
+  border-radius: 35px;
+  padding: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+  #contactWelcomeSection{
+    flex-wrap: wrap;
+  }
+
+  #contactWelcomeImg{
+    margin-right: 25vw;
+  }
 }
 
 /* ##################################### component styles ##################################### */

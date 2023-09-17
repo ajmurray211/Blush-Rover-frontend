@@ -26,7 +26,7 @@ const CustomNav = () => {
                     <Link to="/packages">Packages</Link>
                     <Link to="/menu">Menu</Link>
                     <Link to="/faq">FAQ's</Link>
-                    <Link to="/">Contact</Link>
+                    <Link to="/contact">Contact</Link>
             </Navbar>
         </div>
     );
