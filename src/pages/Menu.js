@@ -1,4 +1,6 @@
 import { cocktails, mocktails, puree } from "../data";
+import drink from '../assets/drink.jpeg'
+import drink2 from '../assets/drink2.jpeg'
 
 const Menu = () => {
 
@@ -12,7 +14,7 @@ const Menu = () => {
             <div id="menuWelcomeSection">
                 <div className="menuWelcome1Grid">
                     <div id="menuFlex1">
-                        <div id="menuTitleImg1" />
+                        <img id="menuTitleImg1" src={drink} />
                         <div className="title" id="menuWelcomMsg">
                             <p id="mm1">Cocktails</p>
                             <p id="mm2">&</p>
@@ -20,7 +22,7 @@ const Menu = () => {
                         </div>
                     </div>
                 </div>
-                <div id="menuTitleImg2" />
+                <img id="menuTitleImg2" src={drink2} />
             </div>
 
             <div id="menuDisclaimerSection" className="body">

@@ -1,4 +1,4 @@
-import logo from '../assets/Cart.png'
+import logo from '../assets/Blush-rover-logo.png'
 import React, { useState } from 'react';
 
 const Footer = () => {

@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
+import cart from '../assets/cart.jpeg'
+import decor from '../assets/decor.jpeg'
 
 const Home = () => {
     return (
         <div>
             <div id="welcomeTitleContainer">
-                <div id="welcomeImg" />
+                <img id="welcomeImg" src={cart} />
                 <div id="welcomeMsg">
                     <p className="homeTitle">WELCOME!</p>
                     <p className="homeDescription">
@@ -40,7 +42,7 @@ const Home = () => {
                         <Button color="light" >Learn More</Button>
                     </Link>
                 </div>
-                <div id="homePackagesImg" />
+                <img id="homePackagesImg" src={decor}/>
             </div>
         </div>
     );

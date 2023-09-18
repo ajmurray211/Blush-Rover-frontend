@@ -1,6 +1,6 @@
 /* ##################################### global styles ##################################### */
 :root {
-  --color-1: rgb(244, 205, 196);
+  --color-1: #F5EFEF;
   --color-2: rgb(84, 84, 84);
   --color-3: rgb(255, 255, 255);
   --color-4: rgb(0, 0, 0);
@@ -44,8 +44,9 @@
 
 #welcomeImg {
   background-color: var(--color-2);
-  width: 600px;
-  height: 500px;
+  width: 50vw;
+  min-width: 375px;
+  height: 600px;
   margin: 20px 0px;
   object-fit: cover;
   object-position: 50% 50%;
@@ -71,6 +72,8 @@
   background-color: var(--color-2);
   width: 400px;
   height: 400px;
+  object-fit: cover;
+  /* background-image: url('../src/assets/drink2.jpeg'); */
 }
 
 .homeTitle {
@@ -83,36 +86,39 @@
   font-family: var(--font-2);
 }
 
-/* Packages Page */
+@media screen and (max-width: 600px) {
 
-#pacakagePage {
-  display: grid;
-  grid-template-rows: repeat(4, .5fr);
-  grid-auto-rows: auto;
-  grid-gap: 100px;
+  #welcomeMsg,
+  #homePackagesMsg {
+    max-width: 90%;
+    margin: 10px;
+  }
 }
 
-#PackagesTitleContainer {
+/* Packages Page */
+
+#PackagesTitleSection {
   position: relative;
-  margin: 30px 40px;
-  min-height: 50vh;
-  height: max-content;
+  margin-top: 5vw;
 }
 
 #packageTitleImg {
   margin-left: 5vw;
+  background-image: url('../src/assets/pour.jpeg');
   width: 50vw;
+  background-position: center;
   height: 30vw;
   background-color: var(--color-2);
+  background-size: cover;
 }
 
 #packageDecContainer {
   padding: 20px;
   background-color: var(--color-1);
   border-radius: 35px;
-  position: absolute;
-  top: 9vw;
-  right: 17vw;
+  position: relative;
+  top: -9vw;
+  right: -30vw;
   max-width: 60vw;
   min-width: 300px;
 }
@@ -125,9 +131,9 @@
 }
 
 .packageVarient {
-  width: 30%;
+  width: 29%;
   min-width: 300px;
-  margin: 20px;
+  margin: 10px 0px 50px 0px;
   padding: 20px;
   border-radius: 35px;
   background-color: var(--color-1);
@@ -145,11 +151,10 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: column;
-  max-width: 40%;
+  margin: 20px;
   border-radius: 35px;
   align-items: center;
   background-color: var(--color-1);
-  margin: auto;
   padding: 20px;
 }
 
@@ -160,20 +165,20 @@
 }
 
 #packageAddOnContainer {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
 }
 
 .addOn {
   background-color: var(--color-1);
   margin: 5px;
-  width: 80%;
+  width: 20vw;
   margin: auto;
   padding: 10px;
   border-radius: 35px;
-  min-width: 200px;
+  min-width: 350px;
 }
 
 /* Menu page */
@@ -202,6 +207,10 @@
   width: 50vw;
   height: 30vw;
   margin-left: 3vw;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 35px;
+
 }
 
 #menuTitleImg2 {
@@ -209,7 +218,10 @@
   right: 15vw;
   background-color: rgba(0, 128, 0, 0.356);
   width: 30vw;
-  height: 40vw;
+  height: 45vw;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 35px;
 }
 
 .menuWelcome1Grid {
@@ -235,10 +247,11 @@
 }
 
 .menuOptions {
-  margin: 0 10%;
+  margin: 0 10vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menuOption {
@@ -262,6 +275,12 @@
   justify-content: center;
   align-items: center;
   margin: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .menuOptions {
+    margin: 0 30vw;
+  }
 }
 
 
@@ -290,12 +309,12 @@
   align-items: center;
 }
 
-.question{
+.question {
   font-size: 25px;
   font-family: var(--font-1);
 }
 
-.answer{
+.answer {
   font-size: 20px;
 }
 
@@ -312,26 +331,26 @@
 
 /* contact page */
 
-#contactWelcomeSection{
-  margin: 5vw 10vw ;
+#contactWelcomeSection {
+  margin: 5vw 10vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
 }
 
-#contactWelcomeMsgContainer{
+#contactWelcomeMsgContainer {
   padding-bottom: 20px;
 }
 
-#contactWelcomeImgContainer{
+#contactWelcomeImgContainer {
   display: flex;
   align-items: center;
   max-width: 50vw;
   justify-content: center;
 }
 
-#contactWelcomeImg{
+#contactWelcomeImg {
   width: 25vw;
   height: 25vw;
   background-color: var(--color-2);
@@ -340,7 +359,7 @@
   min-height: 200px;
 }
 
-#contactWelcomeaccent{
+#contactWelcomeaccent {
   position: relative;
   right: -18vw;
   top: -2vw;
@@ -352,7 +371,7 @@
   background-color: var(--color-1);
 }
 
-#contactContainer{
+#contactContainer {
   background-color: var(--color-1);
   margin: 1vw 6vw;
   border-radius: 35px;
@@ -360,11 +379,11 @@
 }
 
 @media screen and (max-width: 600px) {
-  #contactWelcomeSection{
+  #contactWelcomeSection {
     flex-wrap: wrap;
   }
 
-  #contactWelcomeImg{
+  #contactWelcomeImg {
     margin-right: 25vw;
   }
 }

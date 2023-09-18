@@ -26,7 +26,7 @@ const Packages = () => {
 
     return (
         <div id="pacakagePage">
-            <div id="PackagesTitleContainer">
+            <div id="PackagesTitleSection">
                 <div id="packageTitleImg" />
                 <div id="packageDecContainer">
                     <div id="packageTitleDec">

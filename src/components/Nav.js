@@ -1,4 +1,4 @@
-import logo from '../assets/Cart.png'
+import logo from '../assets/Blush-rover-logo.png'
 import React, { useState } from 'react';
 import { Button, NavItem, NavLink, Navbar } from 'reactstrap';
 import InstagramIcon from '@mui/icons-material/Instagram';
