@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Blush-Rover-frontend/static/css/main.03dafa82.css",
-    "main.js": "/Blush-Rover-frontend/static/js/main.e128f363.js",
-    "static/js/787.cda612ba.chunk.js": "/Blush-Rover-frontend/static/js/787.cda612ba.chunk.js",
-    "static/media/pour.jpeg": "/Blush-Rover-frontend/static/media/pour.7b8457f737329c6f0e20.jpeg",
-    "static/media/drink.jpeg": "/Blush-Rover-frontend/static/media/drink.68e4b5965f6dec9bb49a.jpeg",
-    "static/media/drink3.jpeg": "/Blush-Rover-frontend/static/media/drink3.03491e1a44ebfb4d5194.jpeg",
-    "static/media/decor.jpeg": "/Blush-Rover-frontend/static/media/decor.a745569aec2740101c22.jpeg",
-    "static/media/cart.jpeg": "/Blush-Rover-frontend/static/media/cart.3e954d5bf29ee1a496e4.jpeg",
-    "static/media/drink2.jpeg": "/Blush-Rover-frontend/static/media/drink2.1f4ca1f3072a93233768.jpeg",
-    "static/media/Blush-rover-logo.png": "/Blush-Rover-frontend/static/media/Blush-rover-logo.6891c731597635d640da.png",
-    "index.html": "/Blush-Rover-frontend/index.html",
-    "main.03dafa82.css.map": "/Blush-Rover-frontend/static/css/main.03dafa82.css.map",
-    "main.e128f363.js.map": "/Blush-Rover-frontend/static/js/main.e128f363.js.map",
-    "787.cda612ba.chunk.js.map": "/Blush-Rover-frontend/static/js/787.cda612ba.chunk.js.map"
+    "main.css": "/static/css/main.045730a6.css",
+    "main.js": "/static/js/main.8d8490d1.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/pour.jpeg": "/static/media/pour.7b8457f737329c6f0e20.jpeg",
+    "static/media/drink.jpeg": "/static/media/drink.68e4b5965f6dec9bb49a.jpeg",
+    "static/media/drink3.jpeg": "/static/media/drink3.03491e1a44ebfb4d5194.jpeg",
+    "static/media/decor.jpeg": "/static/media/decor.a745569aec2740101c22.jpeg",
+    "static/media/cart.jpeg": "/static/media/cart.3e954d5bf29ee1a496e4.jpeg",
+    "static/media/drink2.jpeg": "/static/media/drink2.1f4ca1f3072a93233768.jpeg",
+    "static/media/Blush-rover-logo.png": "/static/media/Blush-rover-logo.6891c731597635d640da.png",
+    "index.html": "/index.html",
+    "main.045730a6.css.map": "/static/css/main.045730a6.css.map",
+    "main.8d8490d1.js.map": "/static/js/main.8d8490d1.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03dafa82.css",
-    "static/js/main.e128f363.js"
+    "static/css/main.045730a6.css",
+    "static/js/main.8d8490d1.js"
   ]
 }
