@@ -101,18 +101,13 @@ const puree = [
 
 const questions = [
     {
-        question: 'Are you licensed to serve alcohol, or do we need to provide all alcoholic beverages separately?',
-        answer: "We do not have a license to serve alcohol. If you'd like alcoholic beverages at your event, you will need to provide them separately.",
-        link: ""
-    },
-    {
-        question: 'What are the serving hours for the frozen drinks at our wedding or bridal shower?',
-        answer: "The serving hours can be customized to your event's schedule. We will work with you to determine the most suitable hours for serving frozen drinks.",
+        question: 'Do you have a liquor license?',
+        answer: "Due to WA State Laws we are unable to provide or purchase liquor on behalf of the customer. We are a for hire bartending service. This means we will provide everything you will need, except the alcohol. All cart attendants are licensed to serve alcohol. ",
         link: ""
     },
     {
         question: 'What payment methods do you accept for bookings?',
-        answer: " We accept various payment methods, including credit/debit cards and bank transfers. Please contact us for specific details on how to make a booking payment.",
+        answer: "All payments will be collected through a Square invoice that is sent directly to you. ",
         link: ""
     },
     {
@@ -127,23 +122,17 @@ const questions = [
     },
     {
         question: 'What space and power requirements do you need for the cart setup?',
-        answer: "Our cart setup typically requires access to a standard power outlet. As for space, we will need an area that allows for the cart setup and easy access for our staff to serve your guests.",
+        answer: "Our cart setup typically requires access to a standard power outlet. As for space, we will need an area that allows for the cart setup (2ft X 4ft) and easy access for our staff to serve your guests.",
         link: ""
     },
     {
         question: 'How long does it take to set up and dismantle the cart at the venue?',
-        answer: "The setup and dismantling times can vary depending on the specific event and location. Generally, it takes approximately [insert estimated time] to set up and [insert estimated time] to dismantle the cart.",
-        link: ""
-    },
-
-    {
-        question: 'How far in advance should we book your services for our wedding or bridal shower?',
-        answer: "We recommend booking our services as early as possible to secure your date. Typically, we advise booking at least 3 months in advance to ensure availability.",
+        answer: "1 hour to set up, and one hour to take down- Set-up time may vary depending on the temperature of the space. If the cart is set up in direct sunlight or on a hot day, it may take more time for the drinks to become frozen.",
         link: ""
     },
     {
         question: 'How many frozen drink machines can you provide for our event?',
-        answer: "We can provide multiple frozen drink machines to meet the needs of your event. The exact number will depend on the size of your event and your preferences. We'll work with you to determine the right quantity.",
+        answer: "Blush + Rover has one Double Barrel Frozen Drink Machine, You can choose up to two drinks for an event.",
         link: ""
     },
     {
@@ -153,7 +142,7 @@ const questions = [
     },
     {
         question: 'How many drink options can we select for our event, and can we taste them beforehand?',
-        answer: "You can select a variety of drink options for your event. We can arrange a tasting session in advance so you can sample the flavors and make your choices. Please contact us to arrange a tasting.",
+        answer: "You can select a variety of drink options for your event.",
         link: ""
     },
 ]

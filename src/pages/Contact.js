@@ -19,9 +19,11 @@ const Contact = () => {
     const [selectedPackage, setSelectedPackage] = useState('');
     const [selectedCocktails, setSelectedCocktails] = useState([]);
     const [selectedMocktails, setSelectedMocktails] = useState([]);
-    const [selectedPuree, setSelectedPuree] = useState('');
+    const [selectedPurees, setSelectedPselectedPurees] = useState([]);
     const [success, setSuccess] = useState(false)
     const [fail, setFail] = useState(false)
+    const [formErrors, setFormErrors] = useState({});
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const publicKey = process.env.REACT_APP_PUBLIC_KEY
 
     const handleCocktailSelect = (event) => {
@@ -29,7 +31,7 @@ const Contact = () => {
         if (selectedCocktails.includes(selectedCocktail)) {
             const updatedSelection = selectedCocktails.filter((item) => item !== selectedCocktail);
             setSelectedCocktails(updatedSelection);
-        } else if (selectedCocktails.length + selectedMocktails.length < 4) {
+        } else if (selectedCocktails.length + selectedMocktails.length < 2) {
             setSelectedCocktails([...selectedCocktails, selectedCocktail]);
         }
     };
@@ -39,14 +41,43 @@ const Contact = () => {
         if (selectedMocktails.includes(selectedMocktail)) {
             const updatedSelection = selectedMocktails.filter((item) => item !== selectedMocktail);
             setSelectedMocktails(updatedSelection);
-        } else if (selectedCocktails.length + selectedMocktails.length < 4) {
+        } else if (selectedCocktails.length + selectedMocktails.length < 2) {
             setSelectedMocktails([...selectedMocktails, selectedMocktail]);
         }
     };
 
     const handlePureeSelect = (event) => {
-        const selected = event.target.value;
-        setSelectedPuree(selected);
+        const selectedPuree = event.target.value;
+        if (selectedPurees.includes(selectedPuree)) {
+            const updatedSelection = selectedPurees.filter((item) => item !== selectedPuree);
+            setSelectedPselectedPurees(updatedSelection);
+        } else if (selectedPurees.length < 2) {
+            setSelectedPselectedPurees([...selectedPurees, selectedPuree]);
+        }
+    };
+
+    const checkValue = (data) => {
+        const errors = {};
+
+        if (!fullName.trim()) { errors.fullName = 'Full Name required'; }
+        if (!email.trim()) { errors.email = 'Email required'; }
+        if (!phoneNumber.trim()) { errors.phoneNumber = 'Phone Number required'; }
+        if (!dateOfEvent.trim()) { errors.dateOfEvent = 'Event date required'; }
+        if (!eventType.trim()) { errors.eventType = 'Event type required'; }
+        if (!venueName.trim()) { errors.venueName = 'Venu name required'; }
+        if (!eventStart.trim()) { errors.eventStart = 'Start time required'; }
+        if (!eventEnd.trim()) { errors.eventEnd = 'End time required'; }
+        if (!numOfGuests.trim()) { errors.numOfGuests = 'Number of guests required'; }
+        if (selectedPackage.length == 0) { errors.selectedPackage = 'Package selection required'; }
+        if (selectedCocktails.length + selectedMocktails.length < 2) { errors.selectedCocktails = 'selectedCocktail required'; }
+        if (selectedMocktails.length + selectedCocktails.length < 2) { errors.selectedMocktails = 'selectedMocktail required'; }
+        if (selectedPurees.length < 2) { errors.selectedPurees = 'selectedPurees required'; }
+
+        if (Object.keys(errors).length === 0) {
+            setIsFormSubmitted(true);
+        } else {
+            setFormErrors(errors);
+        }
     };
 
     const handleSubmit = (e) => {
@@ -67,8 +98,10 @@ const Contact = () => {
             selectedPackage: selectedPackage,
             selectedCocktails: selectedCocktails,
             selectedMocktails: selectedMocktails,
-            selectedPuree: selectedPuree,
+            selectedPuree: selectedPurees,
         };
+
+        checkValue(data)
 
         emailjs.send(
             'service_oouc2ct',
@@ -84,6 +117,8 @@ const Contact = () => {
                 console.error('Email send failed:', error);
                 setFail(true)
             });
+        // setSuccess(true)
+        // console.log('submitted')
     };
 
     return (
@@ -112,26 +147,36 @@ const Contact = () => {
                                     <FormGroup>
                                         <Label for="fullName">Full Name</Label>
                                         <Input
+                                            invalid={formErrors.fullName}
                                             type="text"
                                             name="fullName"
                                             id="fullName"
                                             placeholder="Full Name"
                                             value={fullName}
-                                            onChange={(e) => setFullName(e.target.value)}
+                                            onChange={(e) => {
+                                                setFullName(e.target.value)
+                                                checkValue()
+                                            }}
                                         />
+                                        <span className="text-danger">{formErrors.fullName}</span>
                                     </FormGroup>
                                 </Col>
                                 <Col md={6}>{/* email */}
                                     <FormGroup>
                                         <Label for="email">Email</Label>
                                         <Input
+                                            invalid={formErrors.email}
                                             type="email"
                                             name="email"
                                             id="email"
                                             placeholder="Email"
                                             value={email}
-                                            onChange={(e) => setEmail(e.target.value)}
+                                            onChange={(e) => {
+                                                setEmail(e.target.value)
+                                                checkValue()
+                                            }}
                                         />
+                                        <span className="text-danger">{formErrors.email}</span>
                                     </FormGroup>
                                 </Col>
                             </Row>
@@ -140,26 +185,36 @@ const Contact = () => {
                                     <FormGroup>
                                         <Label for="phoneNumber">Phone Number</Label>
                                         <Input
+                                            invalid={formErrors.phoneNumber}
                                             type="tel"
                                             name="phoneNumber"
                                             id="phoneNumber"
                                             placeholder="Phone Number"
                                             value={phoneNumber}
-                                            onChange={(e) => setPhoneNumber(e.target.value)}
+                                            onChange={(e) => {
+                                                setPhoneNumber(e.target.value)
+                                                checkValue()
+                                            }}
                                         />
+                                        <span className="text-danger">{formErrors.phoneNumber}</span>
                                     </FormGroup>
                                 </Col>
                                 <Col md={6}>{/* Eventdate */}
                                     <FormGroup>
                                         <Label for="dateOfEvent">Date of Event</Label>
                                         <Input
+                                            invalid={formErrors.dateOfEvent}
                                             type="date"
                                             name="dateOfEvent"
                                             id="dateOfEvent"
                                             placeholder="Date of Event"
                                             value={dateOfEvent}
-                                            onChange={(e) => setDateOfEvent(e.target.value)}
+                                            onChange={(e) => {
+                                                setDateOfEvent(e.target.value)
+                                                checkValue()
+                                            }}
                                         />
+                                        <span className="text-danger">{formErrors.dateOfEvent}</span>
                                     </FormGroup>
                                 </Col>
                             </Row>
@@ -168,26 +223,36 @@ const Contact = () => {
                                     <FormGroup>
                                         <Label for="eventType">Type of Event</Label>
                                         <Input
+                                            invalid={formErrors.eventType}
                                             type="text"
                                             name="eventType"
                                             id="eventType"
                                             placeholder="Type of Event"
                                             value={eventType}
-                                            onChange={(e) => setEventType(e.target.value)}
+                                            onChange={(e) => {
+                                                setEventType(e.target.value)
+                                                checkValue()
+                                            }}
                                         />
+                                        <span className="text-danger">{formErrors.eventType}</span>
                                     </FormGroup>
                                 </Col>
                                 <Col md={6}>{/* venuename */}
                                     <FormGroup>
                                         <Label for="venueName">Venue Name</Label>
                                         <Input
+                                            invalid={formErrors.venueName}
                                             type="text"
                                             name="venueName"
                                             id="venueName"
                                             placeholder="Venue Name"
                                             value={venueName}
-                                            onChange={(e) => setVenueName(e.target.value)}
+                                            onChange={(e) => {
+                                                setVenueName(e.target.value)
+                                                checkValue()
+                                            }}
                                         />
+                                        <span className="text-danger">{formErrors.venueName}</span>
                                     </FormGroup>
                                 </Col>
                             </Row>
@@ -196,39 +261,54 @@ const Contact = () => {
                                     <FormGroup>
                                         <Label for="eventStart">Event Start</Label>
                                         <Input
+                                            invalid={formErrors.eventStart}
                                             type="time"
                                             name="eventStart"
                                             id="eventStart"
                                             placeholder="Event Start"
                                             value={eventStart}
-                                            onChange={(e) => setEventStart(e.target.value)}
+                                            onChange={(e) => {
+                                                setEventStart(e.target.value)
+                                                checkValue()
+                                            }}
                                         />
+                                        <span className="text-danger">{formErrors.eventStart}</span>
                                     </FormGroup>
                                 </Col>
                                 <Col md={3}>{/* eventend */}
                                     <FormGroup>
                                         <Label for="eventEnd">Event End</Label>
                                         <Input
+                                            invalid={formErrors.eventEnd}
                                             type="time"
                                             name="eventEnd"
                                             id="eventEnd"
                                             placeholder="Event End"
                                             value={eventEnd}
-                                            onChange={(e) => setEventEnd(e.target.value)}
+                                            onChange={(e) => {
+                                                setEventEnd(e.target.value)
+                                                checkValue()
+                                            }}
                                         />
+                                        <span className="text-danger">{formErrors.eventEnd}</span>
                                     </FormGroup>
                                 </Col>
                                 <Col md={6}>{/* numberofguests */}
                                     <FormGroup>
                                         <Label for="numOfGuests">Number of Guests</Label>
                                         <Input
+                                            invalid={formErrors.numOfGuests}
                                             type="number"
                                             name="numOfGuests"
                                             id="numOfGuests"
                                             placeholder="Number of Guests"
                                             value={numOfGuests}
-                                            onChange={(e) => setNumOfGuests(e.target.value)}
+                                            onChange={(e) => {
+                                                setNumOfGuests(e.target.value)
+                                                checkValue()
+                                            }}
                                         />
+                                        <span className="text-danger">{formErrors.numOfGuests}</span>
                                     </FormGroup>
                                 </Col>
                             </Row>
@@ -238,9 +318,11 @@ const Contact = () => {
                                         <FormGroup>
                                             <Label for="package">Packages</Label>
                                             <div>
+                                                <span className="text-danger">{formErrors.selectedPackage}</span>
                                                 <FormGroup check>
                                                     <Label check>
                                                         <Input
+                                                            invalid={formErrors.selectedPackage}
                                                             type="checkbox"
                                                             name="package"
                                                             id="package1"
@@ -254,6 +336,7 @@ const Contact = () => {
                                                 <FormGroup check>
                                                     <Label check>
                                                         <Input
+                                                            invalid={formErrors.selectedPackage}
                                                             type="checkbox"
                                                             name="package"
                                                             id="package2"
@@ -267,6 +350,7 @@ const Contact = () => {
                                                 <FormGroup check>
                                                     <Label check>
                                                         <Input
+                                                            invalid={formErrors.selectedPackage}
                                                             type="checkbox"
                                                             name="package"
                                                             id="package3"
@@ -284,6 +368,7 @@ const Contact = () => {
                                         <FormGroup>
                                             <Label for="moreInfo">Additional Comments</Label>
                                             <Input
+                                                // invalid={formErrors.}
                                                 type="textarea"
                                                 name="moreInfo"
                                                 id="moreInfo"
@@ -297,6 +382,7 @@ const Contact = () => {
                                         <FormGroup>
                                             <Label for="howDidYouHear">How Did You Hear About Us</Label>
                                             <Input
+                                                // invalid={formErrors.}
                                                 type="text"
                                                 name="howDidYouHear"
                                                 id="howDidYouHear"
@@ -310,16 +396,22 @@ const Contact = () => {
                                 <Col md={6}>
                                     <Row>
                                         <Col md={6}>{/* coctails */}
+                                            <span className="text-danger">{formErrors.selectedCocktails}</span>
                                             <FormGroup>
                                                 <Label for="cocktails">Cocktails</Label>
                                                 {cocktails.map((cocktail) => (
                                                     <FormGroup check key={cocktail}>
                                                         <Label check>
                                                             <Input
+                                                                invalid={formErrors.selectedCocktails}
                                                                 type="checkbox"
                                                                 value={cocktail}
                                                                 checked={selectedCocktails.includes(cocktail)}
-                                                                onChange={handleCocktailSelect}
+                                                                onChange={(e) => {
+                                                                    handleCocktailSelect(e)
+                                                                    checkValue()
+                                                                }
+                                                                }
                                                             />
                                                             {cocktail}
                                                         </Label>
@@ -329,33 +421,46 @@ const Contact = () => {
 
                                         </Col>
                                         <Col md={6}>{/* puree */}{/* macktails */}
+                                            <span className="text-danger">{formErrors.selectedMocktails}</span>
                                             <FormGroup>
                                                 <Label for="Mocktails">Mocktails</Label>
                                                 {mocktails.map((mocktail) => (
                                                     <FormGroup check key={mocktail}>
                                                         <Label check>
                                                             <Input
+                                                                invalid={formErrors.selectedMocktails}
                                                                 type="checkbox"
                                                                 value={mocktail}
                                                                 checked={selectedMocktails.includes(mocktail)}
-                                                                onChange={handleMocktailSelect}
+                                                                onChange={(e) => {
+                                                                    handleMocktailSelect(e)
+                                                                    checkValue()
+                                                                }
+                                                                }
                                                             />
                                                             {mocktail}
                                                         </Label>
                                                     </FormGroup>
                                                 ))}
                                             </FormGroup>
+                                            <span className="text-danger">{formErrors.selectedPurees}</span>
+
                                             <FormGroup>
                                                 <Label for="puree">Puree</Label>
                                                 {puree.map((p) => (
                                                     <FormGroup check key={p}>
                                                         <Label check>
                                                             <Input
+                                                                invalid={formErrors.selectedPurees}
                                                                 type="checkbox"
                                                                 name="puree"
                                                                 value={p}
-                                                                checked={selectedPuree === p}
-                                                                onChange={handlePureeSelect}
+                                                                checked={selectedPurees.includes(p)}
+                                                                onChange={(e) => {
+                                                                    handlePureeSelect(e)
+                                                                    checkValue()
+                                                                }
+                                                                }
                                                             />
                                                             {p}
                                                         </Label>
@@ -366,7 +471,9 @@ const Contact = () => {
                                     </Row>
                                 </Col>
                             </Row>
-                            <Button disabled={success} color='light' size='lg' type='submit'>Submit</Button>
+                            <Button disabled={isFormSubmitted && success} color='light' size='lg' type='submit'>
+                                {isFormSubmitted && success ? 'Submitted' : 'Submit'}
+                            </Button>
                         </Form>
                     </Container>
                 </div>
