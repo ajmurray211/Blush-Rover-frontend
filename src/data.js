@@ -3,7 +3,7 @@ const packages = [
         name: 'but first, frose',
         price: 600,
         details: [
-            'Perfect for smaller gatherings, enjoy approximately 80, 100z servings.',
+            'Perfect for smaller gatherings, enjoy approximately 80, 10oz servings.',
             'Two Flavor and Puree Options',
             'Includes 4 garnish options, choose from candy, fruit or a combination',
             '(Frose Refills are Extra)'
@@ -13,7 +13,7 @@ const packages = [
         name: 'yes, way frose',
         price: 800,
         details: [
-            'Elevate your event with an extra 80 servings of frose. Approximately 160, 100Z servings.',
+            'Elevate your event with an extra 80 servings of frose. Approximately 160, 10oz servings.',
             'Two Flavor and puree Option',
             'Includes 4 garnish options. Choose from candy, Fruit or a combination. We will make sure the garnishes stay filled!',
             '(Frose Refills are Extra)'
@@ -23,7 +23,7 @@ const packages = [
         name: 'frose all day',
         price: 1000,
         details: [
-            'Perfect for Weddings or larger events! Approximately 240, 100z servings.',
+            'Perfect for Weddings or larger events! Approximately 240, 10oz servings.',
             'Two Flavor and puree Option',
             'Includes 4 garnish options. Choose from candy, Fruit or a combination. We will make sure the garnishes stay filled!',
             '(Frose Refills are Extra)'
