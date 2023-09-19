@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Alert } from 'reactstrap';
-import { cocktails, mocktails, puree } from '../data';
+import { cocktails, mocktails, puree, addOns } from '../data';
 import emailjs from 'emailjs-com';
 import drink3 from '../assets/drink3.jpeg'
 
@@ -17,6 +17,8 @@ const Contact = () => {
     const [moreInfo, setMoreInfo] = useState('');
     const [howDidYouHear, setHowDidYouHear] = useState('');
     const [selectedPackage, setSelectedPackage] = useState('');
+    const [selectedAddOns, setSelectedAddOns] = useState([]);
+    const [addOnArray, setaddOnArray] = useState([]);
     const [selectedCocktails, setSelectedCocktails] = useState([]);
     const [selectedMocktails, setSelectedMocktails] = useState([]);
     const [selectedPurees, setSelectedPselectedPurees] = useState([]);
@@ -25,6 +27,11 @@ const Contact = () => {
     const [formErrors, setFormErrors] = useState({});
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const publicKey = process.env.REACT_APP_PUBLIC_KEY
+
+    useEffect(() => {
+        const addOnArray = addOns.map((addOn) => { return addOn.name })
+        setaddOnArray(addOnArray)
+    }, [])
 
     const handleCocktailSelect = (event) => {
         const selectedCocktail = event.target.value;
@@ -56,6 +63,16 @@ const Contact = () => {
         }
     };
 
+    const handleAddonSelection = (e) => {
+        const additionalItem = e.target.value;
+        if (selectedAddOns.includes(additionalItem)) {
+            const updatedSelections = selectedAddOns.filter(item => item !== additionalItem);
+            setSelectedAddOns(updatedSelections);
+        } else {
+            setSelectedAddOns([...selectedAddOns, additionalItem]);
+        }
+    }
+
     const checkValue = (data) => {
         const errors = {};
 
@@ -75,8 +92,10 @@ const Contact = () => {
 
         if (Object.keys(errors).length === 0) {
             setIsFormSubmitted(true);
+            return (true)
         } else {
             setFormErrors(errors);
+            return (false)
         }
     };
 
@@ -99,7 +118,10 @@ const Contact = () => {
             selectedCocktails: selectedCocktails,
             selectedMocktails: selectedMocktails,
             selectedPuree: selectedPurees,
+            selectedAddOns: selectedAddOns,
         };
+
+        // console.log(checkValue(data))
 
         if (checkValue(data)) {
             emailjs.send(
@@ -153,7 +175,7 @@ const Contact = () => {
                                             value={fullName}
                                             onChange={(e) => {
                                                 setFullName(e.target.value)
-                                                checkValue()
+                                                // checkValue()
                                             }}
                                         />
                                         <span className="text-danger">{formErrors.fullName}</span>
@@ -171,7 +193,7 @@ const Contact = () => {
                                             value={email}
                                             onChange={(e) => {
                                                 setEmail(e.target.value)
-                                                checkValue()
+                                                // checkValue()
                                             }}
                                         />
                                         <span className="text-danger">{formErrors.email}</span>
@@ -191,7 +213,7 @@ const Contact = () => {
                                             value={phoneNumber}
                                             onChange={(e) => {
                                                 setPhoneNumber(e.target.value)
-                                                checkValue()
+                                                // checkValue()
                                             }}
                                         />
                                         <span className="text-danger">{formErrors.phoneNumber}</span>
@@ -209,7 +231,7 @@ const Contact = () => {
                                             value={dateOfEvent}
                                             onChange={(e) => {
                                                 setDateOfEvent(e.target.value)
-                                                checkValue()
+                                                // checkValue()
                                             }}
                                         />
                                         <span className="text-danger">{formErrors.dateOfEvent}</span>
@@ -229,7 +251,7 @@ const Contact = () => {
                                             value={eventType}
                                             onChange={(e) => {
                                                 setEventType(e.target.value)
-                                                checkValue()
+                                                // checkValue()
                                             }}
                                         />
                                         <span className="text-danger">{formErrors.eventType}</span>
@@ -247,7 +269,7 @@ const Contact = () => {
                                             value={venueName}
                                             onChange={(e) => {
                                                 setVenueName(e.target.value)
-                                                checkValue()
+                                                // checkValue()
                                             }}
                                         />
                                         <span className="text-danger">{formErrors.venueName}</span>
@@ -267,7 +289,7 @@ const Contact = () => {
                                             value={eventStart}
                                             onChange={(e) => {
                                                 setEventStart(e.target.value)
-                                                checkValue()
+                                                // checkValue()
                                             }}
                                         />
                                         <span className="text-danger">{formErrors.eventStart}</span>
@@ -285,7 +307,7 @@ const Contact = () => {
                                             value={eventEnd}
                                             onChange={(e) => {
                                                 setEventEnd(e.target.value)
-                                                checkValue()
+                                                // checkValue()
                                             }}
                                         />
                                         <span className="text-danger">{formErrors.eventEnd}</span>
@@ -303,7 +325,7 @@ const Contact = () => {
                                             value={numOfGuests}
                                             onChange={(e) => {
                                                 setNumOfGuests(e.target.value)
-                                                checkValue()
+                                                // checkValue()
                                             }}
                                         />
                                         <span className="text-danger">{formErrors.numOfGuests}</span>
@@ -312,84 +334,81 @@ const Contact = () => {
                             </Row>
                             <Row>
                                 <Col md={6}>
-                                    <Col>{/* packages */}
-                                        <FormGroup>
-                                            <Label for="package">Packages</Label>
-                                            <div>
-                                                <span className="text-danger">{formErrors.selectedPackage}</span>
-                                                <FormGroup check>
-                                                    <Label check>
-                                                        <Input
-                                                            invalid={formErrors.selectedPackage}
-                                                            type="checkbox"
-                                                            name="package"
-                                                            id="package1"
-                                                            value="But First, Frose"
-                                                            checked={selectedPackage === 'But First, Frose'}
-                                                            onChange={() => setSelectedPackage('But First, Frose')}
-                                                        />
-                                                        But First, Frose
-                                                    </Label>
-                                                </FormGroup>
-                                                <FormGroup check>
-                                                    <Label check>
-                                                        <Input
-                                                            invalid={formErrors.selectedPackage}
-                                                            type="checkbox"
-                                                            name="package"
-                                                            id="package2"
-                                                            value="Yes, Way Frose"
-                                                            checked={selectedPackage === 'Yes, Way Frose'}
-                                                            onChange={() => setSelectedPackage('Yes, Way Frose')}
-                                                        />
-                                                        Yes, Way Frose
-                                                    </Label>
-                                                </FormGroup>
-                                                <FormGroup check>
-                                                    <Label check>
-                                                        <Input
-                                                            invalid={formErrors.selectedPackage}
-                                                            type="checkbox"
-                                                            name="package"
-                                                            id="package3"
-                                                            value="Frose All Day"
-                                                            checked={selectedPackage === 'Frose All Day'}
-                                                            onChange={() => setSelectedPackage('Frose All Day')}
-                                                        />
-                                                        Frose All Day
-                                                    </Label>
-                                                </FormGroup>
-                                            </div>
-                                        </FormGroup>
-                                    </Col>
-                                    <Col >{/* tellusmore */}
-                                        <FormGroup>
-                                            <Label for="moreInfo">Additional Comments</Label>
-                                            <Input
-                                                // invalid={formErrors.}
-                                                type="textarea"
-                                                name="moreInfo"
-                                                id="moreInfo"
-                                                placeholder="Tell Us More"
-                                                value={moreInfo}
-                                                onChange={(e) => setMoreInfo(e.target.value)}
-                                            />
-                                        </FormGroup>
-                                    </Col>
-                                    <Col >{/* hearaboutus */}
-                                        <FormGroup>
-                                            <Label for="howDidYouHear">How Did You Hear About Us</Label>
-                                            <Input
-                                                // invalid={formErrors.}
-                                                type="text"
-                                                name="howDidYouHear"
-                                                id="howDidYouHear"
-                                                placeholder="How Did You Hear About Us"
-                                                value={howDidYouHear}
-                                                onChange={(e) => setHowDidYouHear(e.target.value)}
-                                            />
-                                        </FormGroup>
-                                    </Col>
+                                    <Row>
+                                        <Col>{/* packages */}
+                                            <FormGroup>
+                                                <Label for="package">Packages</Label>
+                                                <div>
+                                                    <span className="text-danger">{formErrors.selectedPackage}</span>
+                                                    <FormGroup check>
+                                                        <Label check>
+                                                            <Input
+                                                                invalid={formErrors.selectedPackage}
+                                                                type="checkbox"
+                                                                name="package"
+                                                                id="package1"
+                                                                value="But First, Frose"
+                                                                checked={selectedPackage === 'But First, Frose'}
+                                                                onChange={() => setSelectedPackage('But First, Frose')}
+                                                            />
+                                                            But First, Frose
+                                                        </Label>
+                                                    </FormGroup>
+                                                    <FormGroup check>
+                                                        <Label check>
+                                                            <Input
+                                                                invalid={formErrors.selectedPackage}
+                                                                type="checkbox"
+                                                                name="package"
+                                                                id="package2"
+                                                                value="Yes, Way Frose"
+                                                                checked={selectedPackage === 'Yes, Way Frose'}
+                                                                onChange={() => setSelectedPackage('Yes, Way Frose')}
+                                                            />
+                                                            Yes, Way Frose
+                                                        </Label>
+                                                    </FormGroup>
+                                                    <FormGroup check>
+                                                        <Label check>
+                                                            <Input
+                                                                invalid={formErrors.selectedPackage}
+                                                                type="checkbox"
+                                                                name="package"
+                                                                id="package3"
+                                                                value="Frose All Day"
+                                                                checked={selectedPackage === 'Frose All Day'}
+                                                                onChange={() => setSelectedPackage('Frose All Day')}
+                                                            />
+                                                            Frose All Day
+                                                        </Label>
+                                                    </FormGroup>
+                                                </div>
+                                            </FormGroup>
+                                        </Col>
+                                        <Col md={6}>{/* add ons */}
+                                            <FormGroup>
+                                                <Label for="cocktails">Add Ons</Label>
+                                                {addOnArray.map((addOn) => (
+                                                    <FormGroup check key={addOn}>
+                                                        <Label check>
+                                                            <Input
+                                                                invalid={formErrors.addOns}
+                                                                type="checkbox"
+                                                                value={addOn}
+                                                                checked={selectedAddOns.includes(addOn)}
+                                                                onChange={(e) => {
+                                                                    handleAddonSelection(e)
+                                                                    // checkValue()
+                                                                }
+                                                                }
+                                                            />
+                                                            {addOn}
+                                                        </Label>
+                                                    </FormGroup>
+                                                ))}
+                                            </FormGroup>
+                                        </Col>
+                                    </Row>
                                 </Col>
                                 <Col md={6}>
                                     <Row>
@@ -407,7 +426,7 @@ const Contact = () => {
                                                                 checked={selectedCocktails.includes(cocktail)}
                                                                 onChange={(e) => {
                                                                     handleCocktailSelect(e)
-                                                                    checkValue()
+                                                                    // checkValue()
                                                                 }
                                                                 }
                                                             />
@@ -432,7 +451,7 @@ const Contact = () => {
                                                                 checked={selectedMocktails.includes(mocktail)}
                                                                 onChange={(e) => {
                                                                     handleMocktailSelect(e)
-                                                                    checkValue()
+                                                                    // checkValue()
                                                                 }
                                                                 }
                                                             />
@@ -456,7 +475,7 @@ const Contact = () => {
                                                                 checked={selectedPurees.includes(p)}
                                                                 onChange={(e) => {
                                                                     handlePureeSelect(e)
-                                                                    checkValue()
+                                                                    // checkValue()
                                                                 }
                                                                 }
                                                             />
@@ -467,6 +486,36 @@ const Contact = () => {
                                             </FormGroup>
                                         </Col>
                                     </Row>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md={6} >{/* tellusmore */}
+                                    <FormGroup>
+                                        <Label for="moreInfo">Additional Comments</Label>
+                                        <Input
+                                            // invalid={formErrors.}
+                                            type="textarea"
+                                            name="moreInfo"
+                                            id="moreInfo"
+                                            placeholder="Tell Us More"
+                                            value={moreInfo}
+                                            onChange={(e) => setMoreInfo(e.target.value)}
+                                        />
+                                    </FormGroup>
+                                </Col>
+                                <Col md={6} >{/* hearaboutus */}
+                                    <FormGroup>
+                                        <Label for="howDidYouHear">How Did You Hear About Us</Label>
+                                        <Input
+                                            // invalid={formErrors.}
+                                            type="textarea"
+                                            name="howDidYouHear"
+                                            id="howDidYouHear"
+                                            placeholder="How Did You Hear About Us"
+                                            value={howDidYouHear}
+                                            onChange={(e) => setHowDidYouHear(e.target.value)}
+                                        />
+                                    </FormGroup>
                                 </Col>
                             </Row>
                             <Button disabled={isFormSubmitted && success} color='light' size='lg' type='submit'>
