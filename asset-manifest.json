@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Blush-Rover-frontend/static/css/main.595fb78b.css",
-    "main.js": "/Blush-Rover-frontend/static/js/main.92e3ac17.js",
+    "main.css": "/Blush-Rover-frontend/static/css/main.03dafa82.css",
+    "main.js": "/Blush-Rover-frontend/static/js/main.e128f363.js",
     "static/js/787.cda612ba.chunk.js": "/Blush-Rover-frontend/static/js/787.cda612ba.chunk.js",
     "static/media/pour.jpeg": "/Blush-Rover-frontend/static/media/pour.7b8457f737329c6f0e20.jpeg",
     "static/media/drink.jpeg": "/Blush-Rover-frontend/static/media/drink.68e4b5965f6dec9bb49a.jpeg",
@@ -11,12 +11,12 @@
     "static/media/drink2.jpeg": "/Blush-Rover-frontend/static/media/drink2.1f4ca1f3072a93233768.jpeg",
     "static/media/Blush-rover-logo.png": "/Blush-Rover-frontend/static/media/Blush-rover-logo.6891c731597635d640da.png",
     "index.html": "/Blush-Rover-frontend/index.html",
-    "main.595fb78b.css.map": "/Blush-Rover-frontend/static/css/main.595fb78b.css.map",
-    "main.92e3ac17.js.map": "/Blush-Rover-frontend/static/js/main.92e3ac17.js.map",
+    "main.03dafa82.css.map": "/Blush-Rover-frontend/static/css/main.03dafa82.css.map",
+    "main.e128f363.js.map": "/Blush-Rover-frontend/static/js/main.e128f363.js.map",
     "787.cda612ba.chunk.js.map": "/Blush-Rover-frontend/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.595fb78b.css",
-    "static/js/main.92e3ac17.js"
+    "static/css/main.03dafa82.css",
+    "static/js/main.e128f363.js"
   ]
 }
