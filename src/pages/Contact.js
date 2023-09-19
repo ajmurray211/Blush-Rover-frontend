@@ -101,24 +101,22 @@ const Contact = () => {
             selectedPuree: selectedPurees,
         };
 
-        checkValue(data)
-
-        emailjs.send(
-            'service_oouc2ct',
-            'template_eidtmra',
-            data,
-            publicKey
-        )
-            .then((response) => {
-                console.log('Email sent successfully:', response);
-                setSuccess(true)
-            })
-            .catch((error) => {
-                console.error('Email send failed:', error);
-                setFail(true)
-            });
-        // setSuccess(true)
-        // console.log('submitted')
+        if (checkValue(data)) {
+            emailjs.send(
+                'service_oouc2ct',
+                'template_eidtmra',
+                data,
+                publicKey
+            )
+                .then((response) => {
+                    console.log('Email sent successfully:', response);
+                    setSuccess(true)
+                })
+                .catch((error) => {
+                    console.error('Email send failed:', error);
+                    setFail(true)
+                });
+        }
     };
 
     return (
