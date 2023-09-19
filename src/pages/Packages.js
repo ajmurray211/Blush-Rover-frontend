@@ -15,7 +15,6 @@ const Packages = () => {
     })
 
     const mappedAddOns = addOns.map((item) => {
-        console.log(item)
         return (
             <div className='addOn body'>
                 <p>{item.name}</p>

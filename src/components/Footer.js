@@ -8,7 +8,7 @@ const Footer = () => {
             <p> Washington law prohibits us from supplying alcohol.</p>
             <div className='location'>
                 <p id='locationsTitle'>Locations:</p>
-                <p>Arlington </p>
+                <p>Snohomish area</p>
             </div>
         </div>
     );

@@ -17,16 +17,18 @@ const CustomNav = () => {
                 <div></div>
                 <img src={logo} />
                 <div className='socials'>
-                    <Button>Contact Me!</Button>
+                    <Link to='/contact'>
+                        <Button>Contact Me!</Button>
+                    </Link>
                     <InstagramIcon onClick={openInstagramProfile} />
                 </div>
             </div>
             <Navbar container className='linksContainer'>
-                    <Link to="/">Home</Link>
-                    <Link to="/packages">Packages</Link>
-                    <Link to="/menu">Menu</Link>
-                    <Link to="/faq">FAQ's</Link>
-                    <Link to="/contact">Contact</Link>
+                <Link to="/">Home</Link>
+                <Link to="/packages">Packages</Link>
+                <Link to="/menu">Menu</Link>
+                <Link to="/faq">FAQ's</Link>
+                <Link to="/contact">Contact</Link>
             </Navbar>
         </div>
     );

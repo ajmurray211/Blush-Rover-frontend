@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Alert } from 'reactstrap';
 import { cocktails, mocktails, puree } from '../data';
 import emailjs from 'emailjs-com';
+import drink3 from '../assets/drink3.jpeg'
 
 const Contact = () => {
     const [fullName, setFullName] = useState('');
@@ -19,6 +20,9 @@ const Contact = () => {
     const [selectedCocktails, setSelectedCocktails] = useState([]);
     const [selectedMocktails, setSelectedMocktails] = useState([]);
     const [selectedPuree, setSelectedPuree] = useState('');
+    const [success, setSuccess] = useState(false)
+    const [fail, setFail] = useState(false)
+    const publicKey = process.env.PUBLIC_KEY
 
     const handleCocktailSelect = (event) => {
         const selectedCocktail = event.target.value;
@@ -50,6 +54,7 @@ const Contact = () => {
 
         const data = {
             fullName: fullName,
+            email: email,
             phoneNumber: phoneNumber,
             dateOfEvent: dateOfEvent,
             eventType: eventType,
@@ -66,24 +71,27 @@ const Contact = () => {
         };
 
         // emailjs.send(
-        //     'service_oouc2ct', 
-        //     'template_eidtmra',  
+        //     'service_oouc2ct',
+        //     'template_eidtmra',
         //     data,
         //     ''
         // )
         //     .then((response) => {
         //         console.log('Email sent successfully:', response);
-        //         // Optionally, reset the form fields or show a success message
+        //         setSuccess(true)
         //     })
         //     .catch((error) => {
         //         console.error('Email send failed:', error);
-        //         // Handle the error or show an error message
+        //         setFail(true)
         //     });
-        console.log(process.env, data)
     };
+    console.log(process.env, publicKey)
 
     return (
         <div id="contactPage">
+            <Alert isOpen={success} color="success" className='emailAlert'>Your email has been sent!</Alert>
+            <Alert isOpen={fail} color="danger" className='emailAlert'>Oh no there was a problem please try again!</Alert>
+            
             <div id="contactWelcomeSection">
                 <div id="contactWelcomeMsgContainer">
                     <p className='title'>Contact Us!</p>
@@ -91,7 +99,7 @@ const Contact = () => {
                 </div>
                 <div id='contactWelcomeImgContainer'>
                     <div id='contactWelcomeaccent'></div>
-                    <div id='contactWelcomeImg'></div>
+                    <img id='contactWelcomeImg' src={drink3} />
                 </div>
             </div>
 
@@ -359,7 +367,7 @@ const Contact = () => {
                                     </Row>
                                 </Col>
                             </Row>
-                            <Button color='light' size='lg' type='submit'>Submit</Button>
+                            <Button disabled={success} color='light' size='lg' type='submit'>Submit</Button>
                         </Form>
                     </Container>
                 </div>

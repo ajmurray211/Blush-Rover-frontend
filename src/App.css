@@ -5,7 +5,8 @@
   --color-3: rgb(255, 255, 255);
   --color-4: rgb(0, 0, 0);
   --font-1: 'Italianno', cursive;
-  --font-2: 'Zilla Slab Highlight';
+  --font-2: 'Raleway', sans-serif;
+  ;
 }
 
 .App {
@@ -118,7 +119,7 @@
   border-radius: 35px;
   position: relative;
   top: -9vw;
-  right: -30vw;
+  right: -25vw;
   max-width: 60vw;
   min-width: 300px;
 }
@@ -357,6 +358,8 @@
   z-index: 1;
   min-width: 200px;
   min-height: 200px;
+  object-fit: cover;
+  object-position: 50% 90%;
 }
 
 #contactWelcomeaccent {
@@ -378,6 +381,17 @@
   padding: 1vw;
 }
 
+.emailAlert {
+  position: sticky;
+  /* Fixed position */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 999;
+}
+
+
 @media screen and (max-width: 600px) {
   #contactWelcomeSection {
     flex-wrap: wrap;
@@ -395,7 +409,10 @@
 #navContainer {
   background-color: var(--color-1);
   font-size: 20px;
-
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; */
 }
 
 .navTitleContainer {
@@ -448,7 +465,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: #F4CDC4;
+  background-color: var(--color-1);
 }
 
 #footerContainer img {
