@@ -22,7 +22,7 @@ const Contact = () => {
     const [selectedPuree, setSelectedPuree] = useState('');
     const [success, setSuccess] = useState(false)
     const [fail, setFail] = useState(false)
-    const publicKey = process.env.PUBLIC_KEY
+    const publicKey = process.env.REACT_APP_PUBLIC_KEY
 
     const handleCocktailSelect = (event) => {
         const selectedCocktail = event.target.value;
@@ -70,28 +70,27 @@ const Contact = () => {
             selectedPuree: selectedPuree,
         };
 
-        // emailjs.send(
-        //     'service_oouc2ct',
-        //     'template_eidtmra',
-        //     data,
-        //     ''
-        // )
-        //     .then((response) => {
-        //         console.log('Email sent successfully:', response);
-        //         setSuccess(true)
-        //     })
-        //     .catch((error) => {
-        //         console.error('Email send failed:', error);
-        //         setFail(true)
-        //     });
+        emailjs.send(
+            'service_oouc2ct',
+            'template_eidtmra',
+            data,
+            publicKey
+        )
+            .then((response) => {
+                console.log('Email sent successfully:', response);
+                setSuccess(true)
+            })
+            .catch((error) => {
+                console.error('Email send failed:', error);
+                setFail(true)
+            });
     };
-    console.log(process.env, publicKey)
 
     return (
         <div id="contactPage">
             <Alert isOpen={success} color="success" className='emailAlert'>Your email has been sent!</Alert>
             <Alert isOpen={fail} color="danger" className='emailAlert'>Oh no there was a problem please try again!</Alert>
-            
+
             <div id="contactWelcomeSection">
                 <div id="contactWelcomeMsgContainer">
                     <p className='title'>Contact Us!</p>

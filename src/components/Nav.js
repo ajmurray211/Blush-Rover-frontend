@@ -15,7 +15,9 @@ const CustomNav = () => {
         <div id='navContainer'>
             <div className='navTitleContainer'>
                 <div></div>
-                <img src={logo} />
+                <Link to='/'>
+                    <img src={logo} />
+                </Link>
                 <div className='socials'>
                     <Link to='/contact'>
                         <Button>Contact Me!</Button>
