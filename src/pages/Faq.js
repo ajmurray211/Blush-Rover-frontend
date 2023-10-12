@@ -1,6 +1,7 @@
 import { Button } from "reactstrap";
 import { questions } from "../data";
 import logo from '../assets/Blush-rover-logo.png'
+import { Link } from "react-router-dom";
 
 const Faq = () => {
 
@@ -27,8 +28,10 @@ const Faq = () => {
             </div>
 
             <div id="faqFooter">
-                <img src={logo} id="faqLogo"/>
-                <Button color="light">Contact us here!</Button>
+                <img src={logo} id="faqLogo" />
+                <Link to='/contact'>
+                    <Button color="light">Contact us here!</Button>
+                </Link>
             </div>
         </div>
     );
