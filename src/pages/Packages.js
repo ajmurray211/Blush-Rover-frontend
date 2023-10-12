@@ -39,6 +39,7 @@ const Packages = () => {
                             <li>Frośe Cart Attendant</li>
                             <li>Full Set up, serve and clean-up</li>
                             <li>Alcohol Guide</li>
+                            <li>3 Hours of serve time</li>
                         </ul>
                         <p className='body'>We do not supply alcohol in any package.</p>
                     </div>

@@ -11,24 +11,19 @@ const Home = () => {
                 <div id="welcomeMsg">
                     <p className="homeTitle">WELCOME!</p>
                     <p className="homeDescription">
-                        Nestled in the heart of Snohomish, Washington, Blush and Rover is your go-to
-                        destination for frozen cocktails and mocktails that are as enchanting as the
-                        Pacific Northwest itself. Whether you're seeking an escape from the everyday
-                        hustle or a vibrant place to unwind with friends and family, we're here to
-                        make your day a little brighter.
+                        We have multiple packages that can fit any event, and are happy to work with you to create the perfect
+                        package for your needs. Whether you’re hosting a birthday celebration, a corporate event, celebrating
+                        a mother or Bride to be, or any other intimate occasion, our cart is the perfect companion to elevate
+                        your event.
                     </p>
                     <p className="homeDescription">
-                        At Blush and Rover, we blend the artistry of mixology with the pure joy of
-                        frozen delights. Our frozen cocktails, kissed with the essence of local
-                        ingredients, and our meticulously crafted mocktails, are designed to
-                        tantalize your taste buds and transport you to a world of flavor and fun. So
-                        , come join us at Blush and Rover, where every sip is a journey, every
-                        moment is a celebration, and every guest is family. Cheers to endless
-                        summer vibes in the heart of Snohomish! 🌞🍸
+                        Our team is passionate about ensuring your event runs smoothly, we take care of everything so you just
+                        focus on enjoying your special day. From Setup, to serving and cleanup our friendly team handles every
+                        detail with efficiency!
                     </p>
                 </div>
             </div>
-            
+
             <div id="homePackagesContainer">
                 <div id="homePackagesMsg">
                     <p className="homeTitle">Packages</p>
@@ -42,7 +37,7 @@ const Home = () => {
                         <Button color="light" >Learn More</Button>
                     </Link>
                 </div>
-                <img id="homePackagesImg" src={decor}/>
+                <img id="homePackagesImg" src={decor} />
             </div>
         </div>
     );
