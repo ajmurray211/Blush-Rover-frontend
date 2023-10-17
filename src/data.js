@@ -1,7 +1,7 @@
 const packages = [
     {
         name: 'but first, frose',
-        price: 600,
+        price: 450,
         details: [
             'Perfect for smaller gatherings, enjoy approximately 80, 10oz servings.',
             'Two Flavor and Puree Options',
@@ -11,7 +11,7 @@ const packages = [
     },
     {
         name: 'yes, way frose',
-        price: 800,
+        price: 700,
         details: [
             'Elevate your event with an extra 80 servings of frose. Approximately 160, 10oz servings.',
             'Two Flavor and puree Option',
@@ -21,7 +21,7 @@ const packages = [
     },
     {
         name: 'frose all day',
-        price: 1000,
+        price: 900,
         details: [
             'Perfect for Weddings or larger events! Approximately 240, 10oz servings.',
             'Two Flavor and puree Option',
