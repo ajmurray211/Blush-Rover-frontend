@@ -1,29 +1,53 @@
 const packages = [
     {
-        name: 'but first, frose',
+        name: 'Mini Frośe',
+        price: 325,
+        details: [
+            'The perfect package for a small event! Enjoy approximately 40, 10oz servings',
+            'This package is perfect for a child’s birthday party or intimate gathering ',
+            'Two Hours of serve time ',
+            'One Flavor and Puree Option',
+            'Includes 4 Garnish options, choose from candy, fruit or a combination ',
+        ]
+    },
+    {
+        name: 'But First, Frośe',
         price: 450,
         details: [
             'Perfect for smaller gatherings, enjoy approximately 80, 10oz servings.',
             'Two Flavor and Puree Options',
             'Includes 4 garnish options, choose from candy, fruit or a combination',
+            '3 Hours of serve time.',
             '(Frose Refills are Extra)'
         ]
     },
     {
-        name: 'yes, way frose',
+        name: 'Welcome Frośe!',
+        price: 600,
+        details: [
+            'This package is dedicated for those looking for a refreshing drink for guests as they arrive for your wedding ceremony, and to help them celebrate during cocktail hour! Enjoy approximately 160, 10oz servings',
+            'Two Hour of serve time (serve time will stop once the ceremony starts and will resume once cocktail hour begins) ',
+            'Two Flavor and Puree Options',
+            'Includes 4 garnish options, choose from candy fruit or a combination ',
+            '(Frośe Refills are Extra) ',
+        ]
+    },
+    {
+        name: 'Yes, Way Frośe',
         price: 700,
         details: [
             'Elevate your event with an extra 80 servings of frose. Approximately 160, 10oz servings.',
             'Two Flavor and puree Option',
             'Includes 4 garnish options. Choose from candy, Fruit or a combination. We will make sure the garnishes stay filled!',
+            '3 Hours of serve time.',
             '(Frose Refills are Extra)'
         ]
     },
     {
-        name: 'frose all day',
+        name: 'Frośe All Day',
         price: 900,
         details: [
-            'Perfect for Weddings or larger events! Approximately 240, 10oz servings.',
+            'Perfect for Larger Events! Approximately 240, 10oz Servings',
             'Two Flavor and puree Option',
             'Includes 4 garnish options. Choose from candy, Fruit or a combination. We will make sure the garnishes stay filled!',
             '(Frose Refills are Extra)'
@@ -33,8 +57,12 @@ const packages = [
 
 const addOns = [
     {
-        name: 'Refills: Additional Hour + Additional 80 Servings',
-        price: '$200'
+        name: 'Refills: 40 additional servings of frośe',
+        price: '$70 - (No Extra Serve Time)'
+    },
+    {
+        name: 'Refills: 80 additional servings of frośe',
+        price: '$125 - (No Extra Serve Time)'
     },
     {
         name: 'Additional Hour (No Extra Frośe Servings) ',
@@ -57,12 +85,8 @@ const addOns = [
         price: 'Price Varies'
     },
     {
-        name: 'Custom Stir Sticks ',
-        price: 'Price Varies'
-    },
-    {
-        name: 'Logo Stickers for Cups',
-        price: 'Price Varies'
+        name: 'Portable Generator',
+        price: 'No power? No worries, we can provide a quiet portable generator for the time of the event. - $30 '
     },
 ]
 
@@ -78,6 +102,9 @@ const cocktails = [
     'APEROL SPRITZ',
     'FROZEN APPLE CIDER',
     'BLACKBERRY PEACH SANGRIA',
+    'ESPRESSO MARTINI',
+    'PALOMA',
+    'WHISKEY SOUR',
 ]
 
 const mocktails = [

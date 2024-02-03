@@ -32,16 +32,14 @@ const Packages = () => {
                         <p className="title">All packages include:</p>
                         <ul className="body">
                             <li>Bar Cart with Double Barrel Frośe Machine</li>
-                            <li>Choice of up to 2 Frozen Cocktails/Mocktail flavors</li>
                             <li>Alcohol Recommendation Guide</li>
                             <li>Frośe Garnishes- Can pick  4 options- Your choice of fresh fruit or candy toppings</li>
                             <li>10oz Plastic Cups, Straws and Napkins</li>
                             <li>Frośe Cart Attendant</li>
                             <li>Full Set up, serve and clean-up</li>
-                            <li>Alcohol Guide</li>
-                            <li>3 Hours of serve time</li>
                         </ul>
                         <p className='body'>We do not supply alcohol in any package.</p>
+                        <p className='body'>If you aren’t seeing a package that fits your needs, please reach out and we are happy to customize a package that fits your event!</p>
                     </div>
                 </div>
             </div>
