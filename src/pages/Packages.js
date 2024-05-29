@@ -29,17 +29,35 @@ const Packages = () => {
                 <div id="packageTitleImg" />
                 <div id="packageDecContainer">
                     <div id="packageTitleDec">
-                        <p className="title">All packages include:</p>
+                        <p className="title">We offer 5 different packages to best fit the needs of your event. All packages include:</p>
                         <ul className="body">
-                            <li>Bar Cart with Double Barrel Frośe Machine</li>
-                            <li>Alcohol Recommendation Guide</li>
-                            <li>Frośe Garnishes- Can pick  4 options- Your choice of fresh fruit or candy toppings</li>
-                            <li>10oz Plastic Cups, Straws and Napkins</li>
-                            <li>Frośe Cart Attendant</li>
-                            <li>Full Set up, serve and clean-up</li>
+                            <li> Blush + Rover bar cart with double barrel frozen cocktail machine</li>
+                            <li> MAST Certified Bartenders</li>
+                            <li> Choice of 4 garnishes to pair with your frozen cocktails</li>
+                            <li> 10oz plastic cups, Straws, and napkins - napkins to match your color scheme are available!</li>
+                            <li> Bar Menu that fits the theme of your event</li>
+                            <li> Setup/ Breakdown and Clean up</li>
+                            <li> Travel within 20 miles of Lake Stevens, WA</li>
+                            <li> General and Liquor Liability Insurance</li>
                         </ul>
-                        <p className='body'>We do not supply alcohol in any package.</p>
-                        <p className='body'>If you aren’t seeing a package that fits your needs, please reach out and we are happy to customize a package that fits your event!</p>
+                        <p className='body'>ALCOHOL IS NOT INCLIDED WITH ANY OF THE FOLLOWING PACKAGES</p>
+
+                        <ul className='body'>
+                            <li> Additional Bartender required for any event with  additional beer, wine & bubbly service added</li>
+                            <li>
+                                Mileage and Ferry fees may apply
+                            </li>
+                        </ul>
+
+                        <p className='disclaimer'>Package pricing does not include gratuity or taxes. Events under 100 guests will have a 15% gratuity added.
+                            For events over 100 guests, a 12% gratuity is added to all service items with a tip jar present (tip jar not required for events under 100 guest )
+                            and 18% if you opt out of a tip jar.
+                        </p>
+                        <p className='disclaimer'>
+                            For the best experience and to ensure compliance with our service standards, insurance and state laws, all alcoholic beverages,
+                            including beer, wine and frozen cocktails must be served exclusively by our bartenders. We kindly ask that no additional bartenders
+                            are onsite. We have additional bartending options below that can be added to any frozen cocktail package.
+                        </p>
                     </div>
                 </div>
             </div>

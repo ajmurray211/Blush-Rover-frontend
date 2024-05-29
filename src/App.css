@@ -185,6 +185,13 @@ img ,#packageTitleImg{
   min-width: 350px;
 }
 
+.disclaimer{
+  color: rgb(102, 94, 94);
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 10px 0 ;
+}
+
 /* Menu page */
 
 #menuPage {

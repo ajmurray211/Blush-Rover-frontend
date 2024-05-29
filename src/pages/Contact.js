@@ -347,6 +347,20 @@ const Contact = () => {
                                                                 type="checkbox"
                                                                 name="package"
                                                                 id="package1"
+                                                                value="Mini Frose"
+                                                                checked={selectedPackage === 'Mini Frose'}
+                                                                onChange={() => setSelectedPackage('Mini Frose')}
+                                                            />
+                                                            Mini Frose
+                                                        </Label>
+                                                    </FormGroup>
+                                                    <FormGroup check>
+                                                        <Label check>
+                                                            <Input
+                                                                invalid={formErrors.selectedPackage}
+                                                                type="checkbox"
+                                                                name="package"
+                                                                id="package2"
                                                                 value="But First, Frose"
                                                                 checked={selectedPackage === 'But First, Frose'}
                                                                 onChange={() => setSelectedPackage('But First, Frose')}
@@ -360,7 +374,21 @@ const Contact = () => {
                                                                 invalid={formErrors.selectedPackage}
                                                                 type="checkbox"
                                                                 name="package"
-                                                                id="package2"
+                                                                id="package3"
+                                                                value="Welcome Frose"
+                                                                checked={selectedPackage === 'Welcome Frose'}
+                                                                onChange={() => setSelectedPackage('Welcome Frose')}
+                                                            />
+                                                            Welcome Frose
+                                                        </Label>
+                                                    </FormGroup>
+                                                    <FormGroup check>
+                                                        <Label check>
+                                                            <Input
+                                                                invalid={formErrors.selectedPackage}
+                                                                type="checkbox"
+                                                                name="package"
+                                                                id="package4"
                                                                 value="Yes, Way Frose"
                                                                 checked={selectedPackage === 'Yes, Way Frose'}
                                                                 onChange={() => setSelectedPackage('Yes, Way Frose')}
@@ -374,7 +402,7 @@ const Contact = () => {
                                                                 invalid={formErrors.selectedPackage}
                                                                 type="checkbox"
                                                                 name="package"
-                                                                id="package3"
+                                                                id="package5"
                                                                 value="Frose All Day"
                                                                 checked={selectedPackage === 'Frose All Day'}
                                                                 onChange={() => setSelectedPackage('Frose All Day')}
@@ -412,6 +440,7 @@ const Contact = () => {
                                 </Col>
                                 <Col md={6}>
                                     <Row>
+                                            <p className='body'> Please pick either two cocktails, two mocktails or one of each </p>
                                         <Col md={6}>{/* coctails */}
                                             <span className="text-danger">{formErrors.selectedCocktails}</span>
                                             <FormGroup>

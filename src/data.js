@@ -1,69 +1,66 @@
 const packages = [
     {
         name: 'Mini Frośe',
-        price: 325,
+        price: 400,
         details: [
             'The perfect package for a small event! Enjoy approximately 40, 10oz servings',
             'This package is perfect for a child’s birthday party or intimate gathering ',
             'Two Hours of serve time ',
             'One Flavor and Puree Option',
             'Includes 4 Garnish options, choose from candy, fruit or a combination ',
+            '1 Bartender/ Attendant'
         ]
     },
     {
         name: 'But First, Frośe',
-        price: 450,
+        price: 575,
         details: [
             'Perfect for smaller gatherings, enjoy approximately 80, 10oz servings.',
             'Two Flavor and Puree Options',
             'Includes 4 garnish options, choose from candy, fruit or a combination',
             '3 Hours of serve time.',
-            '(Frose Refills are Extra)'
+            '(Frose Refills are Extra)',
+            '1 Bartender/ Attendant'
         ]
     },
     {
         name: 'Welcome Frośe!',
-        price: 600,
+        price: 900,
         details: [
             'This package is dedicated for those looking for a refreshing drink for guests as they arrive for your wedding ceremony, and to help them celebrate during cocktail hour! Enjoy approximately 160, 10oz servings',
             'Two Hour of serve time (serve time will stop once the ceremony starts and will resume once cocktail hour begins) ',
             'Two Flavor and Puree Options',
             'Includes 4 garnish options, choose from candy fruit or a combination ',
             '(Frośe Refills are Extra) ',
+            '2 Bartenders'
         ]
     },
     {
         name: 'Yes, Way Frośe',
-        price: 700,
+        price: 1000,
         details: [
             'Elevate your event with an extra 80 servings of frose. Approximately 160, 10oz servings.',
             'Two Flavor and puree Option',
             'Includes 4 garnish options. Choose from candy, Fruit or a combination. We will make sure the garnishes stay filled!',
             '3 Hours of serve time.',
-            '(Frose Refills are Extra)'
+            '(Frose Refills are Extra)',
+            '2 Bartenders'
         ]
     },
     {
         name: 'Frośe All Day',
-        price: 900,
+        price: 1200,
         details: [
             'Perfect for Larger Events! Approximately 240, 10oz Servings',
             'Two Flavor and puree Option',
             'Includes 4 garnish options. Choose from candy, Fruit or a combination. We will make sure the garnishes stay filled!',
-            '(Frose Refills are Extra)'
+            '(Frose Refills are Extra)',
+            '2 Bartenders, 3 hours of serve time '
         ]
     },
 ]
 
 const addOns = [
-    {
-        name: 'Refills: 40 additional servings of frośe',
-        price: '$70 - (No Extra Serve Time)'
-    },
-    {
-        name: 'Refills: 80 additional servings of frośe',
-        price: '$125 - (No Extra Serve Time)'
-    },
     {
         name: 'Additional Hour (No Extra Frośe Servings) ',
         price: '$75'
@@ -88,33 +85,58 @@ const addOns = [
         name: 'Portable Generator',
         price: 'No power? No worries, we can provide a quiet portable generator for the time of the event. - $30 '
     },
+    {
+        name:'Extra Bartender',
+        price:' $50/hour'
+    },
+    {
+        name:'Extra Hours of serve time with no extra servings',
+        price:'$75/hour if added before the event'
+    },
+    {
+        name:'Extra Hour of Serve time with no extra servings',
+        price:'$120/hour if added at the event'
+    },
+    {
+        name:'Additional Beer + Wine Bartending',
+        price:'$50/hour'
+    },
 ]
 
 const cocktails = [
-    'FROSE',
-    'MUDSLIDE',
-    'MARGARITA',
-    'RUM & COKE',
-    'JACK & COKE',
-    'OLD FASHION',
-    'MOSCOW MULE',
-    'PEACH BELLINI',
-    'APEROL SPRITZ',
-    'FROZEN APPLE CIDER',
-    'BLACKBERRY PEACH SANGRIA',
-    'ESPRESSO MARTINI',
-    'PALOMA',
-    'WHISKEY SOUR',
+    'Aperol Spritz ',
+    'Apple Cider ',
+    'Blackberry Peach Sangria',
+    'Daiquiri ',
+    'Espresso Martini',
+    'Frośe ',
+    'Frozen Negroni',
+    'Jack + Coke ',
+    'Mai Tai',
+    'Margarita',
+    'Mojito ',
+    'Moscow Mule',
+    'Mudslide ',
+    'Old Fashion ',
+    'Orange Crush',
+    'Paloma ',
+    'Peach Bellini ',
+    'Piña Colada ',
+    'Spiked Lemonade ',
+    'Whiskey Sour',
 ]
 
 const mocktails = [
-    'FROSE',
-    'COCA COLA',
-    'DREAMSCILE',
-    'BLUE RASPBERRY',
-    'FROZEN APPLE CIDER',
-    'STRAWBERRY LEMONADE',
-    'BLACKBERRY PEACH SANGRIA',
+    'Apple Cider ',
+    'Blackberry Peach ',
+    'Blue Raspberry ',
+    'Coca Cola',
+    'Lemonade',
+    'Mango ',
+    'Orange Crush',
+    'Piña Colada',
+    'Strawberry',
+    'Raspberry',
 ]
 
 const puree = [
