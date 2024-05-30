@@ -62,16 +62,12 @@ const packages = [
 
 const addOns = [
     {
-        name: 'Additional Hour (No Extra Frośe Servings) ',
-        price: '$75'
+        name: 'Extra Bartender',
+        price: ' $50/hour'
     },
     {
         name: 'Additional Wine, Beer, & Bubbly Bartending',
         price: '$50/hour'
-    },
-    {
-        name: 'White Vintage Standing Cooler Rental ',
-        price: '$50'
     },
     {
         name: 'Tossware Drinking Glasses (Elegant and sturdy disposable glasses)',
@@ -85,21 +81,14 @@ const addOns = [
         name: 'Portable Generator',
         price: 'No power? No worries, we can provide a quiet portable generator for the time of the event. - $30 '
     },
+
     {
-        name:'Extra Bartender',
-        price:' $50/hour'
+        name: 'Extra Hours of serve time with no extra servings',
+        price: '$75/hour if added before the event'
     },
     {
-        name:'Extra Hours of serve time with no extra servings',
-        price:'$75/hour if added before the event'
-    },
-    {
-        name:'Extra Hour of Serve time with no extra servings',
-        price:'$120/hour if added at the event'
-    },
-    {
-        name:'Additional Beer + Wine Bartending',
-        price:'$50/hour'
+        name: 'Extra Hour of Serve time with no extra servings',
+        price: '$120/hour if added at the event'
     },
 ]
 

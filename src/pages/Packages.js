@@ -68,7 +68,7 @@ const Packages = () => {
 
             <div id="PackagesTravelContainer">
                 <p className='title'>Travel Fee: </p>
-                <p>We travel within 15 miles of zip code: 98258 for free $0.75 per mile for locations outside of the 15
+                <p>We travel within 20 miles of zip code: 98258 for free $0.75 per mile for locations outside of the 15
                     mile radius. Please reach out to confirm If we travel your location.</p>
             </div>
 
