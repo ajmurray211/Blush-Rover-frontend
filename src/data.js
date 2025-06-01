@@ -19,22 +19,22 @@ const packages = [
             'Two Flavor and Puree Options',
             'Includes 4 garnish options, choose from candy, fruit or a combination',
             '3 Hours of serve time.',
-            '(Frose Refills are Extra)',
-            '1 Bartender/ Attendant'
+            '1 Bartender/ Attendant',
+            'Need more servings? no problem! Additional refills are available for an additional fee',
         ]
     },
-    {
-        name: 'Welcome Frośe!',
-        price: 900,
-        details: [
-            'This package is dedicated for those looking for a refreshing drink for guests as they arrive for your wedding ceremony, and to help them celebrate during cocktail hour! Enjoy approximately 160, 10oz servings',
-            'Two Hour of serve time (serve time will stop once the ceremony starts and will resume once cocktail hour begins) ',
-            'Two Flavor and Puree Options',
-            'Includes 4 garnish options, choose from candy fruit or a combination ',
-            '(Frośe Refills are Extra) ',
-            '2 Bartenders'
-        ]
-    },
+    // {
+    //     name: 'Welcome Frośe!',
+    //     price: 900,
+    //     details: [
+    //         'This package is dedicated for those looking for a refreshing drink for guests as they arrive for your wedding ceremony, and to help them celebrate during cocktail hour! Enjoy approximately 160, 10oz servings',
+    //         'Two Hour of serve time (serve time will stop once the ceremony starts and will resume once cocktail hour begins) ',
+    //         'Two Flavor and Puree Options',
+    //         'Includes 4 garnish options, choose from candy fruit or a combination ',
+    //         '(Frośe Refills are Extra) ',
+    //         '2 Bartenders'
+    //     ]
+    // },
     {
         name: 'Yes, Way Frośe',
         price: 1000,
@@ -43,8 +43,8 @@ const packages = [
             'Two Flavor and puree Option',
             'Includes 4 garnish options. Choose from candy, Fruit or a combination. We will make sure the garnishes stay filled!',
             '3 Hours of serve time.',
-            '(Frose Refills are Extra)',
-            '2 Bartenders'
+            '2 Bartenders/ Attendants',
+            'Need more servings? no problem! Additional refills are available for an additional fee',
         ]
     },
     {
@@ -54,17 +54,17 @@ const packages = [
             'Perfect for Larger Events! Approximately 240, 10oz Servings',
             'Two Flavor and puree Option',
             'Includes 4 garnish options. Choose from candy, Fruit or a combination. We will make sure the garnishes stay filled!',
-            '(Frose Refills are Extra)',
-            '2 Bartenders, 3 hours of serve time '
+            '2 Bartenders/ Attendants, 3 hours of serve time ',
+            'Need more servings? no problem! Additional refills are available for an additional fee',
         ]
     },
 ]
 
 const addOns = [
-    {
-        name: 'Extra Bartender',
-        price: ' $50/hour'
-    },
+    // {
+    //     name: 'Extra Bartender',
+    //     price: ' $50/hour'
+    // },
     {
         name: 'Additional Wine, Beer, & Bubbly Bartending',
         price: '$50/hour'

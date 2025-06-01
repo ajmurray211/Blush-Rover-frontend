@@ -167,6 +167,7 @@ const Contact = () => {
                                     <FormGroup>
                                         <Label for="fullName">Full Name</Label>
                                         <Input
+
                                             invalid={formErrors.fullName}
                                             type="text"
                                             name="fullName"
@@ -440,7 +441,7 @@ const Contact = () => {
                                 </Col>
                                 <Col md={6}>
                                     <Row>
-                                            <p className='body'> Please pick either two cocktails, two mocktails or one of each </p>
+                                        <p className='body'> Please pick either two cocktails, two mocktails or one of each </p>
                                         <Col md={6}>{/* coctails */}
                                             <span className="text-danger">{formErrors.selectedCocktails}</span>
                                             <FormGroup>

@@ -29,10 +29,10 @@ const Packages = () => {
                 <div id="packageTitleImg" />
                 <div id="packageDecContainer">
                     <div id="packageTitleDec">
-                        <p className="title">We offer 5 different packages to best fit the needs of your event. All packages include:</p>
+                        <p className="title">We offer 4 different packages to best fit the needs of your event. All packages include:</p>
                         <ul className="body">
                             <li> Blush + Rover bar cart with double barrel frozen cocktail machine</li>
-                            <li> MAST Certified Bartenders</li>
+                            <li> MAST Certified Bartenders or cart attendants</li>
                             <li> Choice of 4 garnishes to pair with your frozen cocktails</li>
                             <li> 10oz plastic cups, Straws, and napkins - napkins to match your color scheme are available!</li>
                             <li> Bar Menu that fits the theme of your event</li>
@@ -57,6 +57,10 @@ const Packages = () => {
                             For the best experience and to ensure compliance with our service standards, insurance and state laws, all alcoholic beverages,
                             including beer, wine and frozen cocktails must be served exclusively by our bartenders. We kindly ask that no additional bartenders
                             are onsite. We have additional bartending options below that can be added to any frozen cocktail package.
+                        </p>
+                        <p className='disclaimer'>
+                        Please note: Alcoholic slushies are not available for wedding bookings. However, 
+                        we offer a range of refreshing, non-alcoholic slushy flavors that add a unique and festive touch to your special day!
                         </p>
                     </div>
                 </div>
